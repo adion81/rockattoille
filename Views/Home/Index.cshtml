@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model BakeGood
+
+<div class="jumbotron">
+    <h1>Do you smell what The Rock is baking?</h1>
+    <img src="~/img/rockcooking.png" class="img-fluid" alt="The Rock">
+    <div class="alert alert-warning">
+        <p>@Model.Value</p>
+        <a href="/" class="btn btn-info">Sniff Again</a>
+        <p>You have sniffed @ViewBag.Sniffs baked good from The Rock.</p>
+        <a href="/reset" class="btn btn-danger">RESET</a>
+    </div>
+</div>

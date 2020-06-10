@@ -3,13 +3,18 @@
 }
 @model BakeGood
 
-<div class="jumbotron">
+<div class="jumbotron row">
     <h1>Do you smell what The Rock is baking?</h1>
-    <img src="~/img/rockcooking.png" class="img-fluid" alt="The Rock">
-    <div class="alert alert-warning">
-        <p>@Model.Value</p>
-        <a href="/" class="btn btn-info">Sniff Again</a>
-        <p>You have sniffed @ViewBag.Sniffs baked good from The Rock.</p>
-        <a href="/reset" class="btn btn-danger">RESET</a>
+    <img src="~/img/rockcooking.png" class="img-fluid col-6" alt="The Rock">
+    <div class="card col-6 p-0 ">
+        <div class="card-header bg-warning" >
+            <h3 class="card-title">The Rock is serving up ...</h3>
+        </div>
+        <div class="card-body bg-dark text-light">
+            <h4>@Model.Value</h4>
+            <a href="/" class="btn btn-info">Sniff Again</a>
+            <p>You have sniffed @ViewBag.Sniffs baked good from The Rock.</p>
+            <a href="/reset" class="btn btn-danger">RESET</a>
+        </div>
     </div>
 </div>
